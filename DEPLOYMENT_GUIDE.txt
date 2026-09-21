@@ -1,0 +1,49 @@
+APLEXORA FINAL LIVE-READY GITHUB WEBSITE PACKAGE
+
+This package is ready for GitHub Pages.
+
+IMPORTANT
+- Extract the ZIP first.
+- Upload the CONTENTS of the extracted folder to the ROOT of your GitHub repository.
+- Do not upload the ZIP as the website.
+- index.html must sit in the repository root.
+- Keep the assets folder and all files exactly as provided.
+- The CNAME file already contains: aplexora.com
+- The public company profile PDF is NOT included.
+
+CONTACT / INQUIRY SYSTEM
+- Start a Project opens the project inquiry form.
+- Start a Campaign opens the same form with Influencer Marketing / Creator Partnership preselected.
+- Send Inquiry submits directly through Formspree to partnerships@aplexora.com.
+- Formspree endpoint is already integrated: https://formspree.io/f/xyezwkwv
+- No email app is required for the primary form flow.
+
+GITHUB PAGES
+1. Create a public repository named aplexora-website.
+2. Upload all files in this package to the repository root.
+3. Commit changes.
+4. Go to Settings > Pages.
+5. Under Build and deployment, choose Source: Deploy from a branch.
+6. Choose Branch: main and Folder: /(root).
+7. Save and wait for the temporary GitHub Pages URL.
+8. Test Home, Services, Influence, About, Contact, Start a Project, Start a Campaign and Send Inquiry.
+9. Under Custom domain, enter aplexora.com.
+10. In Spaceship DNS, point the apex domain to GitHub Pages and www to your GitHub Pages hostname.
+11. Do not delete or change MX/SPF/DKIM/DMARC records used by Spacemail.
+12. Once DNS is recognized in GitHub Pages, enable Enforce HTTPS.
+
+CORE FILES
+- index.html
+- services.html
+- influence.html
+- about.html
+- contact.html
+- 404.html
+- assets/aplexora-logo.svg
+- assets/aplexora-mark.svg
+- assets/favicon.svg
+- assets/styles.css
+- assets/script.js
+- CNAME
+- robots.txt
+- sitemap.xml
