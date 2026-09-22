@@ -1,0 +1,14 @@
+APLEXORA WEBSITE — FINAL CLEAN-URL RELEASE
+
+This release fixes:
+1. Clean public URLs: /services/, /influence/, /about/, /contact/ (no .html in navigation).
+2. Start a Project: /contact/#project.
+3. Start a Campaign: /contact/#campaign with influencer marketing preselected.
+4. Formspree: official @formspree/ajax integration using form ID xyezwkwv, with native HTML POST as fallback.
+5. Email buttons: open Gmail web compose directly to partnerships@aplexora.com instead of relying on a desktop mailto handler.
+6. Old .html URLs are handled by the 404 redirect helper when encountered.
+
+GitHub Pages note:
+- Keep Source = Deploy from a branch, Branch = main, Folder = /(root).
+- The YAML front matter at the top of about.html, services.html, influence.html and contact.html instructs GitHub Pages/Jekyll to publish those files at clean URLs.
+- Keep CNAME as aplexora.com.
