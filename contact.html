@@ -1,0 +1,53 @@
+---
+permalink: /contact/
+---
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact | Aplexora Business Solutions</title><meta name="description" content="Start a professional-services assignment, brand campaign or creator partnership with Aplexora."><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/styles.css"><meta property="og:title" content="Contact | Aplexora Business Solutions"><meta property="og:description" content="Start a professional-services assignment, brand campaign or creator partnership with Aplexora."><meta property="og:type" content="website"><meta property="og:url" content="https://aplexora.com/"></head><body><header class="header"><div class="container header__row"><a class="brand" href="/" aria-label="Aplexora home"><img src="/assets/aplexora-logo.svg" alt="Aplexora Business Solutions"></a><nav class="nav"><a  href="/">Home</a><a  href="/services/">Services</a><a  href="/influence/">Influence</a><a  href="/about/">About</a><a class="active" href="/contact/">Contact</a><a class="nav-cta" href="/contact/#project">Start a Project</a></nav><button class="menu-btn" aria-label="Open navigation"><span></span></button></div></header><main><section class="page-hero"><div class="container"><div class="breadcrumb"><a href="/">Home</a> / Contact</div><div class="eyebrow">Start a project</div><h1>Tell us what needs<br>to move forward.</h1><p class="lead">Complete the brief below and click Send Inquiry. Your request will be delivered securely to partnerships@aplexora.com without opening an email app.</p></div></section><section class="section"><div class="container contact-layout"><div class="contact-card reveal"><div class="eyebrow" style="color:#62e1db">Business & partnerships</div><h2 style="font-size:2rem;margin-bottom:18px">partnerships@aplexora.com</h2><p>Use this address for brand partnerships, creator opportunities, language assignments, proposals, tenders, documentation projects and general professional-service inquiries.</p><div class="notice">Your inquiry is submitted securely through our website form and delivered to the Aplexora partnerships inbox. Prefer email? You can also write directly to partnerships@aplexora.com.</div><div class="hero__actions"><a class="btn btn--teal gmail-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=partnerships%40aplexora.com&su=Aplexora%20Business%20Inquiry" target="_blank" rel="noopener">Open Gmail to Email Aplexora</a></div></div><div class="reveal"><div class="form-status form-status--success" id="form-success" data-fs-success role="status" aria-live="polite"></div><div class="form-status form-status--error" id="form-error" data-fs-error role="alert" aria-live="assertive"></div><form class="contact-form" id="contact-form" action="https://formspree.io/f/meaogljy" method="POST" target="_top"><input type="hidden" id="request-type" name="request_type" value="General project inquiry"><input type="hidden" name="source" value="aplexora.com"><div class="grid-2" style="gap:14px"><div class="field"><label for="name">Your name</label><input id="name" name="name" data-fs-field required placeholder="Name"></div><div class="field"><label for="organization">Organization / brand</label><input id="organization" name="organization" placeholder="Organization / brand"></div></div><div class="field"><label for="email">Your email</label><input id="email" type="email" name="email" data-fs-field required placeholder="you@example.com"></div><div class="field"><label for="service">Service required</label><select id="service" name="service"><option>Influencer marketing / creator partnership</option><option>Translation / transcription / language services</option><option>Proposal / tender support</option><option>Corporate / business documentation</option><option>Advisory / compliance support</option><option>Digital / branding support</option><option>HR / admin / finance documentation</option><option>Research / business support</option><option>Other / combined assignment</option></select></div><div class="grid-2" style="gap:14px"><div class="field"><label for="deadline">Deadline</label><input id="deadline" name="deadline" placeholder="e.g. 30 October 2026"></div><div class="field"><label for="budget">Budget / market</label><input id="budget" name="budget" placeholder="Optional"></div></div><div class="field"><label for="message">Objective and expected output</label><textarea id="message" name="message" data-fs-field required placeholder="What are you trying to achieve? What should Aplexora deliver? Add any key requirements or links."></textarea></div><div class="hero__actions"><button class="btn btn--primary" type="submit" data-fs-submit-btn>Send Inquiry →</button><a class="btn btn--soft gmail-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=partnerships%40aplexora.com&su=Aplexora%20Business%20Inquiry" target="_blank" rel="noopener">Open Gmail Instead</a></div></form></div></div></section><section class="section section--soft"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">What happens next</div><h2>A simple start.<br>A controlled delivery.</h2></div></div><div class="process-list"><div class="process reveal"><h4>Send the objective</h4><p>Describe expected output, deadline and relevant files or links.</p></div><div class="process reveal"><h4>Clarify scope</h4><p>Aplexora confirms questions, responsibilities, confidentiality and risk.</p></div><div class="process reveal"><h4>Commercial confirmation</h4><p>A quotation, proposal, work order or agreement is issued as appropriate.</p></div></div></div></section></main><footer class="footer"><div class="container"><div class="footer__grid"><div><img src="/assets/aplexora-logo.svg" alt="Aplexora Business Solutions"><p>A multidisciplinary professional-services platform connecting influence, language, documentation, tenders, advisory, digital support and research.</p></div><div><h4>Company</h4><div class="footer__links"><a href="/about/">About Aplexora</a><a href="/services/">Service Suite</a></div></div><div><h4>Current Focus</h4><div class="footer__links"><a href="/influence/">Influencer Marketing</a><a href="/services/#tender">Tender Support</a><a href="/services/#language">Language Services</a></div></div><div><h4>Contact</h4><div class="footer__links"><a class="gmail-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=partnerships%40aplexora.com&su=Aplexora%20Business%20Inquiry" target="_blank" rel="noopener">partnerships@aplexora.com</a><a href="/contact/#project">Start a Project</a></div></div></div><div class="footer__bottom"><span>© 2026 Aplexora Business Solutions.</span><span>Opportunity → structure → execution.</span></div></div></footer><script src="/assets/script.js"></script>
+<script>
+(function(){
+  const form=document.getElementById('contact-form');
+  const success=document.getElementById('form-success');
+  const error=document.getElementById('form-error');
+  if(!form) return;
+
+  form.addEventListener('submit', async function(event){
+    event.preventDefault();
+    success.textContent='';
+    error.textContent='';
+    const button=form.querySelector('button[type="submit"]');
+    const originalText=button ? button.textContent : '';
+    if(button){ button.disabled=true; button.textContent='Sending…'; }
+
+    try{
+      const response=await fetch(form.action,{
+        method:'POST',
+        body:new FormData(form),
+        headers:{'Accept':'application/json'}
+      });
+
+      if(response.ok){
+        success.textContent='Thank you. Your inquiry has been sent successfully to Aplexora.';
+        form.reset();
+        if(location.hash==='#campaign'){
+          const service=document.getElementById('service');
+          const requestType=document.getElementById('request-type');
+          if(service) service.value='Influencer marketing / creator partnership';
+          if(requestType) requestType.value='Influencer marketing campaign';
+        }
+      }else{
+        let message='Your inquiry could not be sent right now. Please try again or use the Gmail option.';
+        try{
+          const data=await response.json();
+          if(data && Array.isArray(data.errors) && data.errors.length){
+            message=data.errors.map(e=>e.message).filter(Boolean).join(' ');
+          }
+        }catch(_){}
+        error.textContent=message;
+      }
+    }catch(_){
+      error.textContent='Your inquiry could not be sent right now. Please try again or use the Gmail option.';
+    }finally{
+      if(button){ button.disabled=false; button.textContent=originalText; }
+    }
+  });
+})();
+</script></body></html>
