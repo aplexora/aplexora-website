@@ -1,0 +1,52 @@
+name: Install Aplexora Kids HD Covers
+on:
+  push:
+    paths:
+      - .github/workflows/install-kids-covers.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  install-covers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Pillow
+        run: python -m pip install --disable-pip-version-check Pillow
+      - name: Download verified original artwork and make HD covers
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 --connect-timeout 20 --max-time 120 'https://d2ol7oe51mr4n9.cloudfront.net/user_3JrUqCIiuFweMBb8ZwUpwG0pIx8/a847088e-e8e6-4911-8c0a-e9f85f6f7341.png' -o /tmp/aplexora-kids-art.png
+          echo 'b200a41517131776c3a51cc0ba7077fb4fd243163cd108e455fd6c38d1449ae7  /tmp/aplexora-kids-art.png' | sha256sum -c -
+          python - <<'PY'
+          from PIL import Image
+          from pathlib import Path
+          art = Image.open('/tmp/aplexora-kids-art.png').convert('RGB')
+          assert art.size == (1536, 1024), art.size
+          Path('assets').mkdir(exist_ok=True)
+          for name, bounds in [
+              ('kids-starlight-unicorn-hq.webp', (35, 10, 769, 992)),
+              ('kids-little-animal-hq.webp', (799, 10, 1505, 992)),
+          ]:
+              image = art.crop(bounds)
+              image.save('assets/' + name, format='WEBP', quality=94, method=6)
+              print(name, image.size)
+          PY
+      - name: Commit book cover images
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/kids-starlight-unicorn-hq.webp assets/kids-little-animal-hq.webp
+          if git diff --cached --quiet; then echo "Covers already installed"; exit 0; fi
+          git commit -m "Add high-quality Unicorn and Animal book cover images"
+          git push
