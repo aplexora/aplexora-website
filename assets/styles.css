@@ -21,3 +21,12 @@
 .form-status{display:none;border-radius:16px;padding:14px 16px;margin:0 0 16px;font-weight:700;line-height:1.5}.form-status--success{background:#e7f7f1;border:1px solid #b9e7d5;color:#176a4b}.form-status--error{background:#fff0ee;border:1px solid #f0c6c0;color:#a53a2d}.contact-form button:disabled{opacity:.7;cursor:wait}
 
 [data-fs-success]:not(:empty),[data-fs-error]:not(:empty){display:block}.gmail-link:after{content:" ↗";font-size:.82em}
+
+/* Contact form: reliable anchor position and narrow-screen layout */
+#contact-form{scroll-margin-top:110px}
+@media(max-width:1020px){
+  .contact-layout{grid-template-columns:minmax(0,1fr)}
+  .contact-layout>*,.contact-form,.contact-form .grid-2,.contact-form .field{min-width:0;max-width:100%}
+  .contact-card h2{overflow-wrap:anywhere}
+  .contact-form .field select{min-width:0;max-width:100%}
+}
