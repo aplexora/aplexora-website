@@ -48,3 +48,25 @@
 @media(max-width:1050px){.kids-stories{grid-template-columns:1fr}.kids-story{grid-template-columns:minmax(0,230px) minmax(0,1fr)}}
 @media(max-width:700px){.kids-categories{padding:38px 0 0}.kids-categories__grid{grid-template-columns:1fr}.kids-category{padding:19px}.kids-category__icon{width:55px;height:55px;min-width:55px}.kids-stories-section{padding:65px 0}.kids-stories-section__heading{display:block}.kids-stories-section__note{display:inline-flex;margin-top:18px}}
 @media(max-width:520px){.kids-story{grid-template-columns:1fr}.kids-story__art{min-height:290px}.kids-story__body{padding:26px}.kids-category__copy strong{font-size:1.12rem}}
+
+/* Aplexora Kids: official Amazon author profiles */
+.kids-authors{padding:88px 0 94px;background:#fff;scroll-margin-top:85px}
+.kids-authors__heading{text-align:center;max-width:730px;margin:0 auto 34px}
+.kids-authors__heading h2{font-size:clamp(2rem,3.2vw,3rem);letter-spacing:-.04em;line-height:1.2;color:#173552;margin:10px 0 12px}
+.kids-authors__heading p{font-size:1rem;line-height:1.7;color:#53687a;margin:0}
+.kids-authors__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.kids-author{display:flex;align-items:flex-start;gap:24px;padding:34px;border:1px solid #e7dfea;border-radius:22px;background:linear-gradient(135deg,#fdf9ff,#fff);box-shadow:0 14px 35px #1735520b}
+.kids-author:nth-child(2){background:linear-gradient(135deg,#f2faff,#fff)}
+.kids-author__avatar{display:grid;place-items:center;flex:0 0 82px;width:82px;height:82px;border-radius:23px;font-size:1.75rem;letter-spacing:-.06em;font-weight:950;box-shadow:0 12px 22px #17355216}
+.kids-author__avatar--brand{background:linear-gradient(145deg,#cfe4ff,#e9d9fb);color:#2a528b}
+.kids-author__avatar--writer{background:linear-gradient(145deg,#d8f5f1,#e0eaff);color:#236979}
+.kids-author__info{min-width:0}
+.kids-author__eyebrow{display:block;color:#9561a0;font-size:.7rem;font-weight:900;letter-spacing:.1em}
+.kids-author h3{font-size:1.45rem;line-height:1.2;letter-spacing:-.025em;color:#173858;margin:9px 0 10px}
+.kids-author p{font-size:.93rem;line-height:1.7;color:#586a7e;margin:0 0 20px}
+.kids-author__link{display:inline-flex;align-items:center;gap:12px;padding:12px 16px;border-radius:11px;background:#173d64;color:#fff;font-size:.85rem;font-weight:850;text-decoration:none;transition:background .2s ease}
+.kids-author__link:hover{background:#0d9294;color:#fff}
+.kids-author__link:focus-visible{outline:3px solid #0d9294;outline-offset:3px}
+@media(max-width:900px){.kids-authors__grid{grid-template-columns:1fr}}
+@media(max-width:650px){.kids-authors{padding:65px 0}.kids-author{padding:24px;gap:17px}.kids-author__avatar{width:60px;height:60px;flex-basis:60px;border-radius:17px;font-size:1.35rem}}
+@media(max-width:400px){.kids-author{flex-direction:column}.kids-author__link{font-size:.8rem}}
