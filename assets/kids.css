@@ -70,3 +70,10 @@
 @media(max-width:900px){.kids-authors__grid{grid-template-columns:1fr}}
 @media(max-width:650px){.kids-authors{padding:65px 0}.kids-author{padding:24px;gap:17px}.kids-author__avatar{width:60px;height:60px;flex-basis:60px;border-radius:17px;font-size:1.35rem}}
 @media(max-width:400px){.kids-author{flex-direction:column}.kids-author__link{font-size:.8rem}}
+
+/* Actual author photos: full-color artwork and natural portrait */
+.kids-author img.kids-author__avatar{display:block;flex:0 0 126px;width:126px;height:126px;object-fit:cover;object-position:center;border-radius:21px;background:#fff;border:3px solid #fff;box-shadow:0 12px 28px #17355220}
+.kids-author img.kids-author__avatar--brand{object-fit:contain}
+.kids-author img.kids-author__avatar--writer{object-position:center 32%}
+@media(max-width:650px){.kids-author img.kids-author__avatar{flex-basis:94px;width:94px;height:94px;border-radius:18px}}
+@media(max-width:400px){.kids-author img.kids-author__avatar{flex-basis:126px;width:126px;height:126px}}
