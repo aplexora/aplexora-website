@@ -33,13 +33,20 @@ const hash=(location.hash||'').replace('#','');if(hash&&document.getElementById(
 // Project / campaign intent on the clean Contact URL.
 const form=document.querySelector('#contact-form');
 const intent=(location.hash||'').replace('#','').toLowerCase();
-if(form && (intent==='campaign' || intent==='project')){
+const topic=new URLSearchParams(location.search).get('topic');
+if(form && (intent==='campaign' || intent==='project' || topic==='kids')){
   const serviceField=form.querySelector('#service');
   const messageField=form.querySelector('#message');
   const requestType=form.querySelector('#request-type');
   const gmailLinks=document.querySelectorAll('.gmail-link');
   const to='partnerships@aplexora.com';
-  if(intent==='campaign'){
+  if(topic==='kids'){
+    if(serviceField) serviceField.value="Children's books / Aplexora Kids publishing";
+    if(requestType) requestType.value='Aplexora Kids publishing inquiry';
+    if(messageField) messageField.placeholder='Tell us about your children\'s book or publishing inquiry, including any questions, collaboration ideas or relevant links.';
+    const subject='Aplexora Kids Publishing Inquiry';
+    gmailLinks.forEach(a=>a.href=`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${encodeURIComponent(subject)}`);
+  }else if(intent==='campaign'){
     if(serviceField) serviceField.value='Influencer marketing / creator partnership';
     if(requestType) requestType.value='Influencer marketing campaign';
     if(messageField) messageField.placeholder='Tell us the campaign objective, target audience / market, preferred platforms, creator profile or niche, expected deliverables, timeline, estimated budget, and any relevant links.';
