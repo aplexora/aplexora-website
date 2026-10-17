@@ -54,8 +54,8 @@
 .kids-creator__panel{display:grid;grid-template-columns:minmax(0,0.88fr) minmax(0,1.12fr);align-items:center;gap:clamp(34px,5vw,80px);padding:clamp(24px,3.4vw,52px);border:1px solid #e2e5f0;border-radius:30px;background:#fff;box-shadow:0 28px 75px #183b5c12;overflow:hidden}
 .kids-creator__visual{position:relative;min-width:0;padding:0 26px 30px 0;isolation:isolate}
 .kids-creator__visual::before{content:"";position:absolute;z-index:-1;inset:24px 0 0 24px;border-radius:29px;background:linear-gradient(155deg,#d9f7f7,#e6e4ff 60%,#f8e3f1)}
-.kids-creator__portrait-frame{overflow:hidden;aspect-ratio:4/4.75;border-radius:25px;background:#e9edf5;box-shadow:0 20px 40px #17355224}
-.kids-creator__portrait{display:block;width:100%;height:100%;object-fit:cover;object-position:center 32%}
+.kids-creator__portrait-frame{overflow:hidden;aspect-ratio:1/1;border-radius:25px;background:#e9edf5;box-shadow:0 20px 40px #17355224}
+.kids-creator__portrait{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
 .kids-creator__brand-mark{position:absolute;right:0;bottom:0;width:clamp(112px,13vw,166px);aspect-ratio:1;border-radius:50%;padding:7px;background:#fff;box-shadow:0 15px 36px #193a5b25;border:1px solid #edf0f8;overflow:hidden}
 .kids-creator__brand-mark img{display:block;width:100%;height:100%;object-fit:contain;border-radius:50%}
 .kids-creator__content{min-width:0;padding:10px 0}
@@ -75,6 +75,6 @@
 .kids-creator__link--secondary:hover{background:#eae0f1;color:#60386c}
 .kids-creator__link:focus-visible{outline:3px solid #0d9294;outline-offset:3px}
 @media(max-width:960px){.kids-creator__panel{grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:32px;padding:28px}.kids-creator__content h2{font-size:clamp(1.85rem,3.3vw,2.7rem)}.kids-creator__bio{font-size:.94rem;line-height:1.75}.kids-creator__brand-mark{width:120px}}
-@media(max-width:740px){.kids-creator{padding:65px 0 75px}.kids-creator__panel{grid-template-columns:1fr;gap:30px;padding:22px}.kids-creator__visual{width:min(100%,420px);margin:0 auto;padding:0 20px 22px 0}.kids-creator__portrait-frame{aspect-ratio:4/3.7}.kids-creator__brand-mark{width:122px}.kids-creator__content{padding:0 5px 8px}.kids-creator__content h2{font-size:clamp(2rem,7vw,2.65rem)}}
+@media(max-width:740px){.kids-creator{padding:65px 0 75px}.kids-creator__panel{grid-template-columns:1fr;gap:30px;padding:22px}.kids-creator__visual{width:min(100%,420px);margin:0 auto;padding:0 20px 22px 0}.kids-creator__portrait-frame{aspect-ratio:1/1}.kids-creator__brand-mark{width:122px}.kids-creator__content{padding:0 5px 8px}.kids-creator__content h2{font-size:clamp(2rem,7vw,2.65rem)}}
 @media(max-width:480px){.kids-creator__panel{border-radius:22px;padding:15px;gap:25px}.kids-creator__portrait-frame{border-radius:17px}.kids-creator__brand-mark{width:105px;padding:5px}.kids-creator__content{padding:0 6px 13px}.kids-creator__name span{display:block;margin-top:5px}.kids-creator__links{flex-direction:column}.kids-creator__link{width:100%}}
 @media(prefers-reduced-motion:reduce){.kids-creator__link{transition:none}}
