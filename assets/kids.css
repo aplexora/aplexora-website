@@ -9,7 +9,7 @@
 .kids-categories{padding:54px 0 8px;background:#fff}
 .kids-categories__intro{text-align:center;margin-bottom:25px}
 .kids-categories__intro h2{font-size:clamp(1.7rem,3vw,2.55rem);letter-spacing:-.035em;color:#173552;margin:9px 0}
-.kids-categories__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.kids-categories__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .kids-category{display:flex;align-items:center;gap:20px;padding:26px 27px;border-radius:21px;border:1px solid #e7dbea;color:#173858;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease;min-width:0}
 .kids-category:hover{transform:translateY(-3px);box-shadow:0 16px 32px #17355217;color:#173858}
 .kids-category:focus-visible{outline:3px solid #0d9294;outline-offset:3px}
@@ -78,3 +78,73 @@
 @media(max-width:740px){.kids-creator{padding:65px 0 75px}.kids-creator__panel{grid-template-columns:1fr;gap:30px;padding:22px}.kids-creator__visual{width:min(100%,420px);margin:0 auto;padding:0 20px 22px 0}.kids-creator__portrait-frame{aspect-ratio:1/1}.kids-creator__brand-mark{width:122px}.kids-creator__content{padding:0 5px 8px}.kids-creator__content h2{font-size:clamp(2rem,7vw,2.65rem)}}
 @media(max-width:480px){.kids-creator__panel{border-radius:22px;padding:15px;gap:25px}.kids-creator__portrait-frame{border-radius:17px}.kids-creator__brand-mark{width:105px;padding:5px}.kids-creator__content{padding:0 6px 13px}.kids-creator__name span{display:block;margin-top:5px}.kids-creator__links{flex-direction:column}.kids-creator__link{width:100%}}
 @media(prefers-reduced-motion:reduce){.kids-creator__link{transition:none}}
+
+/* Three published book collections: coloring, activities, storytelling */
+.kids-categories__intro p{max-width:650px;margin:8px auto 0;color:#61738a;line-height:1.6}
+.kids-category{gap:15px;padding:22px 19px}
+.kids-category__icon{width:57px;height:57px;min-width:57px;font-size:2rem}
+.kids-category__copy strong{font-size:1.1rem;line-height:1.25}
+.kids-category--activity{background:linear-gradient(125deg,#e7faef,#f5ffe8);border-color:#d7eeda}
+.kids-category--activity .kids-category__icon{color:#168357}
+.kids-category--activity .kids-category__arrow{color:#168357}
+.kids-category--story{background:linear-gradient(125deg,#fff1e4,#f7eafe);border-color:#f0e0de}
+.kids-feature-section{padding:95px 0 100px;scroll-margin-top:85px}
+.kids-feature-section--activity{background:linear-gradient(145deg,#f0fbf6 0%,#f9fff5 52%,#fffaf1 100%)}
+.kids-feature-section--story{background:linear-gradient(145deg,#fff8ee 0%,#fff6f8 55%,#f7f1ff 100%)}
+.kids-feature__heading{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-bottom:36px}
+.kids-feature__heading h2{font-size:clamp(2rem,3.2vw,3rem);letter-spacing:-.04em;color:#173552;margin:10px 0}
+.kids-feature__heading p{max-width:720px;line-height:1.7;color:#53687a;margin:0}
+.kids-feature__note{flex-shrink:0;display:inline-flex;border-radius:40px;background:#fff;border:1px solid #dcece2;color:#297a54;padding:12px 17px;font-size:.76rem;font-weight:900;letter-spacing:.04em;white-space:nowrap}
+.kids-feature-section--story .kids-feature__note{border-color:#f0dce7;color:#a15a72}
+.kids-feature{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);max-width:1120px;margin:auto;border:1px solid #dce8df;border-radius:27px;background:#fff;overflow:hidden;box-shadow:0 20px 55px #17355214}
+.kids-feature--story{grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);border-color:#eee0e5}
+.kids-feature__visual{display:flex;align-items:center;justify-content:center;min-width:0;padding:38px 28px;background:radial-gradient(circle at 32% 18%,#fffbd6,transparent 44%),linear-gradient(145deg,#d9f3e4,#e7f9f2 55%,#e3f4e0)}
+.kids-feature--story .kids-feature__visual{order:2;background:radial-gradient(circle at 80% 22%,#fff1be,transparent 42%),linear-gradient(145deg,#f8e5ff,#ffe9db 55%,#fff1c9)}
+.kids-feature__visual img{display:block;width:auto;max-width:min(100%,295px);max-height:425px;height:auto;object-fit:contain;border-radius:9px;box-shadow:0 19px 38px #1735523a}
+.kids-feature--story .kids-feature__visual img{max-height:445px}
+.kids-feature__body{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-width:0;padding:clamp(27px,4vw,55px)}
+.kids-feature--story .kids-feature__body{order:1}
+.kids-feature__eyebrow{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:#21845d;font-weight:900}
+.kids-feature--story .kids-feature__eyebrow{color:#ad6081}
+.kids-feature__body h3{font-size:clamp(2rem,3.2vw,3.1rem);line-height:1.08;letter-spacing:-.045em;color:#173858;margin:16px 0 6px}
+.kids-feature__subtitle{font-size:1.18rem;color:#21845d;font-weight:850;margin:0 0 19px}
+.kids-feature--story .kids-feature__subtitle{color:#a35b82}
+.kids-feature__body>p:not(.kids-feature__subtitle){font-size:.98rem;color:#566a7c;line-height:1.8;margin:0}
+.kids-feature__chips{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 26px}
+.kids-feature__chips span{border-radius:40px;background:#eef8f2;color:#2c7654;padding:8px 12px;font-size:.77rem;font-weight:800}
+.kids-feature--story .kids-feature__chips span{background:#fff0f5;color:#945374}
+.kids-feature__buy{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:15px 23px;border-radius:12px;background:#12784f;color:#fff;font-size:.93rem;font-weight:900;text-decoration:none;transition:background .2s ease,transform .2s ease}
+.kids-feature__buy:hover{background:#0b5b3d;color:#fff;transform:translateY(-2px)}
+.kids-feature--story .kids-feature__buy{background:#b94f72}
+.kids-feature--story .kids-feature__buy:hover{background:#96385a;color:#fff}
+.kids-feature__buy:focus-visible,.kids-feature__markets a:focus-visible{outline:3px solid #0d9294;outline-offset:3px}
+.kids-feature__markets{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin-top:17px;font-size:.76rem}
+.kids-feature__markets span{color:#718397;font-weight:750;margin-right:4px}
+.kids-feature__markets a{display:inline-flex;align-items:center;justify-content:center;min-width:33px;padding:6px 8px;border-radius:22px;border:1px solid #d7e7dc;color:#2a7653;background:#fff;font-weight:850}
+.kids-feature__markets a:hover{background:#e8f8ed;color:#115a3c}
+.kids-feature--story .kids-feature__markets a{border-color:#f0d9e4;color:#9b5373}
+.kids-feature--story .kids-feature__markets a:hover{background:#fff0f5;color:#853d60}
+@media(max-width:960px){
+ .kids-categories__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .kids-feature{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+ .kids-feature--story{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}
+ .kids-feature__visual{padding:30px 20px}
+ .kids-feature__visual img{max-width:min(100%,260px)}
+}
+@media(max-width:700px){
+ .kids-categories__grid{grid-template-columns:1fr}
+ .kids-feature-section{padding:65px 0 72px}
+ .kids-feature__heading{display:block}
+ .kids-feature__note{margin-top:18px}
+ .kids-feature,.kids-feature--story{grid-template-columns:1fr}
+ .kids-feature__visual,.kids-feature--story .kids-feature__visual{order:0;min-height:300px;padding:30px}
+ .kids-feature__visual img,.kids-feature--story .kids-feature__visual img{max-width:min(100%,245px);max-height:350px}
+ .kids-feature__body,.kids-feature--story .kids-feature__body{order:1;padding:29px 26px 33px}
+}
+@media(max-width:420px){
+ .kids-feature__visual{padding:23px}
+ .kids-feature__body{padding:25px 21px 29px}
+ .kids-feature__buy{width:100%;font-size:.85rem;padding:14px 12px}
+ .kids-feature__markets{gap:6px}
+}
+@media(prefers-reduced-motion:reduce){.kids-feature__buy{transition:none}}
