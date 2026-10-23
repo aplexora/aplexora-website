@@ -148,3 +148,6 @@
  .kids-feature__markets{gap:6px}
 }
 @media(prefers-reduced-motion:reduce){.kids-feature__buy{transition:none}}
+
+/* Keep collection headings visible beneath the sticky site navigation */
+#book-categories,#collection,#activitybooks,#storybooks,#authors{scroll-margin-top:110px}
