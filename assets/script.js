@@ -28,7 +28,9 @@ for(const group of document.querySelectorAll('[data-tabs]')){const buttons=group
 const serviceButtons=document.querySelectorAll('.service-menu-btn');
 function openService(id){serviceButtons.forEach(b=>b.classList.toggle('active',b.dataset.service===id));document.querySelectorAll('.service-panel').forEach(p=>p.classList.toggle('active',p.id===`service-${id}`));const panel=document.getElementById(`service-${id}`);if(panel&&window.innerWidth<1020)panel.scrollIntoView({behavior:'smooth',block:'start'})}
 serviceButtons.forEach(b=>b.addEventListener('click',()=>openService(b.dataset.service)));
-const hash=(location.hash||'').replace('#','');if(hash&&document.getElementById(`service-${hash}`))openService(hash);
+function openServiceFromHash(){const id=(location.hash||'').replace(/^#(?:service-)?/,'');if(id&&document.getElementById(`service-${id}`)){openService(id);document.getElementById(`service-${id}`).scrollIntoView({block:'start'})}}
+openServiceFromHash();
+window.addEventListener('hashchange',openServiceFromHash);
 
 // Project / campaign intent on the clean Contact URL.
 const form=document.querySelector('#contact-form');
