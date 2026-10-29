@@ -26,9 +26,9 @@ for(const group of document.querySelectorAll('[data-tabs]')){const buttons=group
 
 // Services explorer
 const serviceButtons=document.querySelectorAll('.service-menu-btn');
-function openService(id){serviceButtons.forEach(b=>b.classList.toggle('active',b.dataset.service===id));document.querySelectorAll('.service-panel').forEach(p=>p.classList.toggle('active',p.id===`service-${id}`));const panel=document.getElementById(`service-${id}`);if(panel&&window.innerWidth<1020)panel.scrollIntoView({behavior:'smooth',block:'start'})}
+function openService(id,scrollOnMobile=true){serviceButtons.forEach(b=>b.classList.toggle('active',b.dataset.service===id));document.querySelectorAll('.service-panel').forEach(p=>p.classList.toggle('active',p.id===`service-${id}`));const panel=document.getElementById(`service-${id}`);if(panel&&scrollOnMobile&&window.innerWidth<1020)panel.scrollIntoView({behavior:'smooth',block:'start'})}
 serviceButtons.forEach(b=>b.addEventListener('click',()=>openService(b.dataset.service)));
-function openServiceFromHash(){const id=(location.hash||'').replace(/^#(?:service-)?/,'');if(id&&document.getElementById(`service-${id}`)){openService(id);document.getElementById(`service-${id}`).scrollIntoView({block:'start'})}}
+function openServiceFromHash(){const id=(location.hash||'').replace(/^#(?:service-)?/,'');const panel=id&&document.getElementById(`service-${id}`);if(panel){openService(id,false);panel.scrollIntoView({block:'start'})}}
 openServiceFromHash();
 window.addEventListener('hashchange',openServiceFromHash);
 
