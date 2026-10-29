@@ -33,3 +33,9 @@
 
 /* Deep-linked service panels must remain visible below the sticky navigation. */
 .service-panel[id]{scroll-margin-top:155px}
+@media(max-width:1020px){
+  .service-explorer{grid-template-columns:minmax(0,1fr)}
+  .service-explorer>*{min-width:0;max-width:100%}
+  .service-menu-btn{min-width:0}
+}
+@media(max-width:680px){.service-menu{grid-template-columns:minmax(0,1fr)}}
