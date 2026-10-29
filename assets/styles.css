@@ -30,3 +30,6 @@
   .contact-card h2{overflow-wrap:anywhere}
   .contact-form .field select{min-width:0;max-width:100%}
 }
+
+/* Deep-linked service panels must remain visible below the sticky navigation. */
+.service-panel[id]{scroll-margin-top:155px}
