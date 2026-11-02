@@ -4,7 +4,19 @@ const menuBtn=document.querySelector('.menu-btn');
 const nav=document.querySelector('.nav');
 const syncHeader=()=>header&&header.classList.toggle('scrolled',window.scrollY>15);
 syncHeader();window.addEventListener('scroll',syncHeader,{passive:true});
-if(menuBtn&&nav){menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')))}
+if(menuBtn&&nav){
+  if(!nav.id)nav.id='main-navigation';
+  menuBtn.setAttribute('aria-controls',nav.id);
+  const setMenuOpen=(open)=>{
+    nav.classList.toggle('open',open);
+    menuBtn.setAttribute('aria-expanded',String(open));
+    menuBtn.setAttribute('aria-label',open?'Close navigation':'Open navigation');
+  };
+  setMenuOpen(false);
+  menuBtn.addEventListener('click',()=>setMenuOpen(!nav.classList.contains('open')));
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenuOpen(false)));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){setMenuOpen(false);menuBtn.focus()}});
+}
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.10});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
 // Homepage solution console
