@@ -42,3 +42,6 @@
 
 /* Keep the homepage hero readable without sideways scrolling on small phones. */
 @media(max-width:480px){.hero h1{font-size:clamp(2.3rem,10vw,3.1rem);overflow-wrap:anywhere}.hero__grid>*{min-width:0}.trustbar__row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Prevent long About and Influence page headings from overflowing compact phones. */
+@media(max-width:480px){.page-hero h1{font-size:clamp(2.2rem,10vw,3rem);overflow-wrap:anywhere}}
