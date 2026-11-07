@@ -9,7 +9,7 @@
 .kids-categories{padding:54px 0 8px;background:#fff}
 .kids-categories__intro{text-align:center;margin-bottom:25px}
 .kids-categories__intro h2{font-size:clamp(1.7rem,3vw,2.55rem);letter-spacing:-.035em;color:#173552;margin:9px 0}
-.kids-categories__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.kids-categories__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .kids-category{display:flex;align-items:center;gap:20px;padding:26px 27px;border-radius:21px;border:1px solid #e7dbea;color:#173858;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease;min-width:0}
 .kids-category:hover{transform:translateY(-3px);box-shadow:0 16px 32px #17355217;color:#173858}
 .kids-category:focus-visible{outline:3px solid #0d9294;outline-offset:3px}
@@ -154,3 +154,27 @@
 
 /* Keep the Kids hero and contact CTA within the narrowest mobile viewports. */
 @media(max-width:360px){.kids-hero__inner>*{min-width:0}.kids-hero h1{font-size:clamp(2.1rem,12vw,2.7rem);overflow-wrap:anywhere}.kids-button--light{max-width:100%;white-space:normal;text-align:center}}
+
+/* A fourth, faith-and-learning collection and clear Kindle purchase choices. */
+.kids-category--faith{background:linear-gradient(120deg,#fff8e8,#e8f7f1)}
+.kids-category--faith .kids-category__icon{color:#9a7141}
+.kids-feature-section--faith{background:linear-gradient(145deg,#fffaf0 0%,#fffdf5 48%,#edf8f1 100%)}
+.kids-feature-section--faith .kids-feature__note{border-color:#eee2c9;color:#8b6a38}
+.kids-feature--faith{border-color:#e7e0cf}
+.kids-feature--faith .kids-feature__visual{background:radial-gradient(circle at 30% 16%,#fff9d7,transparent 46%),linear-gradient(145deg,#f7e6c9,#f5f0dc 55%,#e2f4e8)}
+.kids-feature--faith .kids-feature__eyebrow{color:#9a7141}
+.kids-feature--faith .kids-feature__subtitle{color:#946c42}
+.kids-feature--faith .kids-feature__chips span{background:#fff4df;color:#855f37}
+.kids-feature--faith .kids-feature__buy{background:#94623b}
+.kids-feature--faith .kids-feature__buy:hover{background:#744925;color:#fff}
+.kids-feature--faith .kids-feature__markets a{border-color:#ecdec7;color:#8a623a}
+.kids-feature__ebook{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:13px;width:100%;margin-top:19px;padding:16px;border:1px solid #e1dff1;border-radius:16px;background:linear-gradient(120deg,#f7f4ff,#fffafd)}
+.kids-feature__ebook-copy{display:flex;flex-direction:column;gap:5px}
+.kids-feature__ebook-label{font-size:.67rem;letter-spacing:.1em;color:#746494;font-weight:900}
+.kids-feature__ebook-copy strong{color:#243e61;font-size:1.08rem}
+.kids-feature__ebook-link{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 16px;border-radius:11px;background:#314c79;color:#fff;text-decoration:none;font-size:.83rem;font-weight:850;transition:background .2s ease,transform .2s ease}
+.kids-feature__ebook-link:hover{background:#20385e;color:#fff;transform:translateY(-2px)}
+.kids-feature__ebook-link:focus-visible{outline:3px solid #0d9294;outline-offset:3px}
+#faithbooks{scroll-margin-top:110px}
+@media(max-width:480px){.kids-feature__ebook{align-items:stretch}.kids-feature__ebook-link{width:100%}}
+@media(prefers-reduced-motion:reduce){.kids-feature__ebook-link{transition:none}}
